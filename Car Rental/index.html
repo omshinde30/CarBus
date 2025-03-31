@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="navbar">
+    <nav class="navbar  fixed-top navbar-expand-lg " style="padding-left: 4rem;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">CarBus</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown" style="margin-left: 4rem;">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Service</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Categories
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="hatchbag.html">Daily-Car</a></li>
+                <li><a class="dropdown-item" href="#">Cargo-Van</a></li>
+                <li><a class="dropdown-item" href="#">Cargo-Carrier</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+          </ul>
+          <div class="loginbtn" style="margin-left: 60rem">
+            <!-- Button to open the modal -->
+            <button id="openModal">Login / Signup</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Login</h2>
+      <form id="loginForm">
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit" class="loginbtn">Login</button>
+      </form>
+      <p>Don't have an account? <a href="#" id="switchToSignup">Signup</a></p>
+
+      <h2 id="signupTitle" style="display:none;">Signup</h2>
+      <form id="signupForm" style="display:none;">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <input type="tel" id="phoneNumber" placeholder="Phone Number" maxlength="10" required>
+        <button type="submit">Signup</button>
+      </form>
+      <p id="switchToLoginText" style="display:none;">Already have an account? <a href="#" id="switchToLogin">Login</a>
+      </p>
+    </div>
+  </div>
+  <div class="infoHeader">
+    <h2><b>There's an CarBus ride for everyone</b></h2>
+  </div>
+  <div class="info">
+    <div class="card" style="width: 20rem;" id="cardcar">
+      <img src="/images/carlogo2.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">For any budget</h5>
+        <p class="card-text">From Autos to Prime Sedans and Prime SUVs, you will find a ride in your budget at your
+          convenience any time.</p>
+      </div>
+    </div>
+    <div class="card" style="width: 20rem;" id="cardcar">
+      <img src="/images/time-removebg-preview.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">For any duration</h5>
+        <p class="card-text">Easily plan a day out without having to worry about conveyance with an hour-based package
+          from Rental.</p>
+      </div>
+    </div>
+    <div class="card" style="width:20rem;" id="cardcar">
+      <img src="/images/laguage-removebg-preview.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">For any distance</h5>
+        <p class="card-text">Book rides within the city with Daily, or take a trip to your favourite destinations
+          outside the city with Outstation.</p>
+      </div>
+    </div>
+  </div>
+  <div class="formimg">
+    <div class="mainform">
+      <form action="" method="post">
+        <div class="formheader">
+          <h2>Select your ride</h2>
+        </div>
+        <div class="input-group mb-3">
+          <input class="form-control py-3" type="text" placeholder="Pick-up point" aria-label="default input example">
+          <input class="form-control ms-3" type="text" placeholder="Return point" aria-label="default input example">
+        </div>
+        <div class="input-group ">
+          <input type="date" class="form-control py-3" placeholder="Pick-up date" aria-label="pickupdate"
+            id="pickupdate" min="">
+          <div class="form-control" id="timeSelect">
+            <select>
+              <option value="12">12</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+            </select>
+            <select>
+              <option value="00">00</option>
+              <option value="15">15</option>
+              <option value="30">30</option>
+              <option value="45">45</option>
+            </select>
+            <select>
+              <option value="AM">AM</option>
+              <option value="PM">PM</option>
+            </select>
+          </div>
+          <input type="date" class="form-control ms-3" placeholder="Return date" aria-label="Returndate" id="returndate"
+            min="">
+          <div class="form-control" id="timeSelect">
+            <select>
+              <option value="12">12</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+            </select>
+            <select>
+              <option value="00">00</option>
+              <option value="15">15</option>
+              <option value="30">30</option>
+              <option value="45">45</option>
+            </select>
+            <select>
+              <option value="AM">AM</option>
+              <option value="PM">PM</option>
+            </select>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="infoHeader">
+    <h2><b>Vehicle hire with CarBus</b></h2>
+  </div>
+  <div class="info">
+    <div class="card" style="width: 20rem;" id="cardcar">
+      <img src="/images/dailycar.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Cars</h5>
+        <p class="card-text">Speed things up, and screech off towards your dream destination! Endless possibilities to
+          discover.</p>
+        <button class="btn btn-warning" type="submit">Speed things</button>
+      </div>
+    </div>
+    <div class="card" style="width: 20rem;" id="cardcar">
+      <img src="/images/van2.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Vans</h5>
+        <p class="card-text">Load up and roll out! Move goods with ease and efficiency.Business or logistics, cargo vans
+          keep you on the move!</p>
+        <button class="btn btn-warning" type="submit">Discover things</button>
+      </div>
+    </div>
+    <div class="card" style="width:20rem;" id="cardcar">
+      <img src="/images/cargo.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Cargo</h5>
+        <p class="card-text">Stack it up and hit the road! Carry more, go farther—cargo carriers make transport
+          effortless for every journey!</p>
+        <button class="btn btn-warning" type="submit">Carry things</button>
+      </div>
+    </div>
+  </div>
+  <div class="carsinfo">
+    <div class="companyinfo">
+      <p>365</p>
+      <div class="parainfo">
+        <p>days per year <br> Available for you</p>
+      </div>
+      <p>60</p>
+      <div class="parainfo">
+        <p>different models<br>In more than 80 finishes</p>
+      </div>
+      <p>200</p>
+      <div class="parainfo">
+        <p>professionals<br>At your service</p>
+      </div>
+    </div>
+
+    <h3>RENT YOUR CAR WITH CARBUS AT THE BEST PRICE</h3>
+    <div class="storeinfo">
+      <p>CarBus has an extensive fleet of fully equipped rental vehicles to guarantee safe, comfortable driving on all
+        journeys. We have the latest models on the market, with convertible, automatic, premium, electric, SUV, compact
+        and family vehicles, as well as special models adapted to your needs. We also have cargo vans and campers. Our
+        wide range of vehicles, constantly updated, offers high performance for individuals, groups and businesses. We
+        are a trustworthy rental agency. Additionally, we offer you new services, such as OK Long-term Rental, the most
+        advantageous flexible solution for immediately accessing your new vehicle. All at the most competitive prices on
+        the market! We offer personalized attention 365 days a year from our more than 60 service points located
+        throughout the main locations of Pune.</p>
+    </div>
+  </div>
+  <div class="footersection">
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+  </script>
+  <script src="/controllers/form.js"></script>
+  <script src="/JS/main.js"></script>
+</body>
+
+</html>

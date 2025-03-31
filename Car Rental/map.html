@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental - Map Integration</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+    <script>
+        function initAutocomplete() {
+            let pickupInput = document.getElementById("pickup");
+            let dropoffInput = document.getElementById("dropoff");
+
+            let autocompletePickup = new google.maps.places.Autocomplete(pickupInput);
+            let autocompleteDropoff = new google.maps.places.Autocomplete(dropoffInput);
+        }
+    </script>
+</head>
+<body onload="initAutocomplete()">
+    <h2>Select Pickup and Drop-off Locations</h2>
+    <input id="pickup" type="text" placeholder="Enter pickup location">
+    <input id="dropoff" type="text" placeholder="Enter drop-off location">
+</body>
+</html>
